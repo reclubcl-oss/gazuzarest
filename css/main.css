@@ -369,6 +369,122 @@ input:focus, .select-input:focus {
     gap: 40px;
 }
 
+/* Layout Utilities */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+/* Menu Card Overrides */
+.menu-categories-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.menu-category h3 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.menu-item-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 8px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.menu-item-card:hover {
+    border-color: var(--primary);
+    background: rgba(255,255,255,0.06);
+    transform: translateY(-5px);
+}
+
+.menu-item-card.featured {
+    border-left: 4px solid var(--primary);
+}
+
+.menu-item-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.menu-item-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.menu-item-card .price {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Contact & Map Styles */
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-top: 20px;
+}
+
+.contact-methods {
+    margin: 40px 0;
+}
+
+.method {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.method .icon {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.social-links-large {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.social-btn.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; }
+.social-btn.facebook { background: #3b5998; color: #fff; }
+.social-btn.whatsapp { background: #25d366; color: #fff; }
+
+.social-btn:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
 /* Animations */
 .fade-in {
     opacity: 0;

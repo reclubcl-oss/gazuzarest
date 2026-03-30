@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const scrollThreshold = 50;
+    const welcomePopup = document.getElementById('welcome-popup');
+    const closePopup = document.getElementById('close-popup');
 
     // Sticky Header effect
     window.addEventListener('scroll', () => {
@@ -8,6 +10,26 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
+        }
+    });
+
+    // Welcome Popup Logic
+    setTimeout(() => {
+        if (welcomePopup) {
+            welcomePopup.classList.add('active');
+        }
+    }, 3000); // 3 seconds delay
+
+    if (closePopup) {
+        closePopup.addEventListener('click', () => {
+            welcomePopup.classList.remove('active');
+        });
+    }
+
+    // Close popup on outside click
+    window.addEventListener('click', (e) => {
+        if (e.target === welcomePopup) {
+            welcomePopup.classList.remove('active');
         }
     });
 
@@ -30,12 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
                 date: document.getElementById('date').value,
-                time: document.getElementById('time').value
+                time: document.getElementById('time').value,
+                guests: document.getElementById('guests').value
             };
             
-            console.log('Reserva capturada:', formData);
-            alert('¡Gracias por tu reserva, ' + formData.name + '! Nos pondremos en contacto contigo pronto.');
+            console.log('Reserva Gazuza capturada:', formData);
+            alert('¡Gracias por tu reserva, ' + formData.name + '! Nos pondremos en contacto contigo al número ' + formData.phone + ' para confirmar.');
             reservationForm.reset();
         });
     }
