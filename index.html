@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gourmet Experience | Sabor y Elegancia</title>
-    <meta name="description" content="Descubre una experiencia culinaria única con ingredientes frescos y un ambiente exclusivo. Reserva tu mesa hoy.">
+    <title>Gazuza Restaurant | Parrilladas y Sabor Premium</title>
+    <meta name="description" content="Gazuza Restaurant: La mejor experiencia en parrilladas y alta cocina. Reserva tu mesa y vive un momento inolvidable.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
     <header id="header">
         <nav class="navbar container">
             <div class="logo">
-                <a href="#">GOURMET<span>.</span></a>
+                <a href="#">GAZUZA<span>.</span></a>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Inicio</a></li>
@@ -100,8 +100,13 @@
                     <div class="form-group">
                         <input type="text" id="name" placeholder="Nombre completo" required>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Correo electrónico" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Teléfono de contacto" required>
+                        </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
@@ -111,7 +116,18 @@
                             <input type="time" id="time" required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Confirmar Reserva</button>
+                    <div class="form-group">
+                        <select id="guests" required class="select-input">
+                            <option value="" disabled selected>Número de personas</option>
+                            <option value="1">1 Persona</option>
+                            <option value="2">2 Personas</option>
+                            <option value="3">3 Personas</option>
+                            <option value="4">4 Personas</option>
+                            <option value="5">5 Personas</option>
+                            <option value="6">6 Personas o más (Consultar p/ grupo)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Reservar mesa</button>
                 </form>
             </div>
         </section>
@@ -120,8 +136,8 @@
     <footer class="footer section-padding">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <div class="logo">GOURMET<span>.</span></div>
-                <p>Pasión por la gastronomía, compromiso con la excelencia.</p>
+                <div class="logo">GAZUZA<span>.</span></div>
+                <p>Pasión por la gastronomía, compromiso con la excelencia en parrilladas.</p>
             </div>
             <div class="footer-links">
                 <h4>Navegación</h4>
@@ -131,17 +147,35 @@
                     <li><a href="#reservations">Reservas</a></li>
                 </ul>
             </div>
+            <div class="footer-hours">
+                <h4>Horarios</h4>
+                <p>Lunes - Jueves: 12:30 - 23:00</p>
+                <p>Viernes - Sábado: 12:30 - 00:00</p>
+                <p>Domingo: 12:30 - 18:00</p>
+            </div>
             <div class="footer-contact">
                 <h4>Contacto</h4>
                 <p>Av. Principal 123, Ciudad</p>
                 <p>+56 9 1234 5678</p>
-                <p>contacto@gourmet.cl</p>
+                <p>contacto@gazuza.cl</p>
             </div>
         </div>
         <div class="footer-bottom container">
-            <p>&copy; 2026 Gourmet Experience. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Gazuza Restaurant. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Welcome Popup -->
+    <div id="welcome-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button id="close-popup" class="close-btn">&times;</button>
+            <div class="popup-body">
+                <h2>¡Sé parte de nuestro club y te premiamos! 🎁</h2>
+                <p>Únete a nuestra comunidad y recibe beneficios exclusivos en tu próxima visita.</p>
+                <a href="https://signup.comeback.es/4bf7d718/createCustomer?source=Web" class="btn btn-primary" target="_blank">¡Quiero mis premios!</a>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

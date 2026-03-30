@@ -278,7 +278,7 @@ header.scrolled {
     gap: 20px;
 }
 
-input {
+input, .select-input {
     width: 100%;
     padding: 15px;
     background: rgba(255,255,255,0.05);
@@ -289,9 +289,84 @@ input {
     transition: var(--transition);
 }
 
-input:focus {
+input:focus, .select-input:focus {
     outline: none;
     border-color: var(--primary);
+}
+
+.select-input option {
+    background: var(--bg-dark);
+}
+
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-content {
+    background: var(--bg-card);
+    border: 1px solid var(--primary);
+    padding: 60px 40px;
+    border-radius: 12px;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    animation: popupFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes popupFadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--primary);
+}
+
+.popup-body h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.popup-body p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+/* Footer expansion */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
 }
 
 /* Animations */
