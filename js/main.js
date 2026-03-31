@@ -60,25 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Reservation Form Submission
-    const reservationForm = document.getElementById('reservation-form');
-    if (reservationForm) {
-        reservationForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                date: document.getElementById('date').value,
-                time: document.getElementById('time').value,
-                guests: document.getElementById('guests').value
-            };
-            
-            console.log('Reserva Gazuza capturada:', formData);
-            alert('¡Gracias por tu reserva, ' + formData.name + '! Nos pondremos en contacto contigo al número ' + formData.phone + ' para confirmar.');
-            reservationForm.reset();
-        });
-    }
+
 
     // Mobile Bottom Nav Active State
     const bottomNavItems = document.querySelectorAll('.mobile-bottom-nav .nav-item');
