@@ -176,7 +176,7 @@ header.scrolled {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('file:///Users/creavity/.gemini/antigravity/brain/8408cabd-2544-46ba-8b2f-181f2ba4d4b1/carne_asada_premium_hero_1774916240081.png');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/hero.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -442,6 +442,22 @@ input:focus, .select-input:focus {
     flex-direction: column;
     gap: 80px;
     margin-top: 60px;
+}
+
+#cat-parrillas {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../assets/parrillada.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    border-radius: 12px;
+}
+
+#cat-postres {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../assets/postre.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    border-radius: 12px;
 }
 
 .menu-category h3 {
