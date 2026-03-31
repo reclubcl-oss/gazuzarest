@@ -16,6 +16,11 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
+    
+    <!-- PWA / Mobile optimized -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#c5a47e">
+    <link rel="apple-touch-icon" href="assets/hero.png">
 </head>
 <body>
     <header id="header">
@@ -498,6 +503,28 @@
             </div>
         </div>
     </div>
+
+    </div>
+    
+    <!-- Bottom Mobile Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="#home" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="#menu" class="nav-item">
+            <i class="fas fa-utensils"></i>
+            <span>Menú</span>
+        </a>
+        <a href="#reservations" class="nav-item">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Reservar</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=56961972149" class="nav-item accent" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+    </nav>
 
     <script src="js/main.js"></script>
 </body>

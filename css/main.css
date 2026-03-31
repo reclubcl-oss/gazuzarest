@@ -692,4 +692,91 @@ input:focus, .select-input:focus {
         flex-direction: column;
         align-items: center;
     }
+
+    /* Bottom Nav Padding for Page */
+    body {
+        padding-bottom: 70px;
+    }
+}
+
+/* Mobile Bottom Navigation Bar */
+.mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background: rgba(18, 18, 20, 0.9);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 2000;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* Specific for newer iPhones (Safe Area) */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .mobile-bottom-nav {
+        height: calc(65px + env(safe-area-inset-bottom));
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    body {
+        padding-bottom: calc(70px + env(safe-area-inset-bottom));
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-bottom-nav {
+        display: flex;
+    }
+}
+
+.mobile-bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.7rem;
+    gap: 4px;
+    transition: var(--transition);
+    flex: 1;
+}
+
+.mobile-bottom-nav .nav-item i {
+    font-size: 1.2rem;
+}
+
+.mobile-bottom-nav .nav-item.active {
+    color: var(--primary);
+}
+
+.mobile-bottom-nav .nav-item.accent {
+    color: #25d366;
+}
+
+.mobile-bottom-nav .nav-item:active {
+    transform: scale(0.9);
+}
+
+/* Mobile-First Spacing Tweaks */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+
+    .menu-item-card {
+        padding: 15px;
+    }
 }

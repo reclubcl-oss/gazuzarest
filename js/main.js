@@ -80,16 +80,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth Scroll for Internal Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
+    // Mobile Bottom Nav Active State
+    const bottomNavItems = document.querySelectorAll('.mobile-bottom-nav .nav-item');
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop - 150) {
+                current = section.getAttribute('id');
             }
+        });
+
+        bottomNavItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href').includes(current)) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    bottomNavItems.forEach(item => {
+        item.addEventListener('click', () => {
+            bottomNavItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
         });
     });
 });
