@@ -698,6 +698,10 @@ input:focus, .select-input:focus {
     body {
         padding-bottom: 70px;
     }
+
+    .logo-img {
+        height: 55px;
+    }
 }
 
 /* Mobile Bottom Navigation Bar */
