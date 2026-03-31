@@ -117,6 +117,18 @@ header.scrolled {
     color: var(--primary);
 }
 
+.logo-img {
+    height: 45px;
+    width: auto;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
 .nav-links {
     display: flex;
     gap: 40px;
