@@ -37,10 +37,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
 
-    if (menuToggle) {
+    if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
-            // Logic for mobile toggle could go here
-            console.log('Menu Toggled');
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
         });
     }
 
