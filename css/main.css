@@ -207,7 +207,6 @@ header.scrolled {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/hero.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -474,9 +473,6 @@ input:focus, .select-input:focus {
 }
 
 #cat-parrillas {
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../assets/parrillada.png');
-    background-size: cover;
-    background-position: center;
     padding: 60px;
     border-radius: 12px;
 }
@@ -514,6 +510,7 @@ input:focus, .select-input:focus {
     border-radius: 8px;
     position: relative;
     transition: var(--transition);
+    text-align: center;
 }
 
 .menu-item-card:hover {
@@ -756,6 +753,10 @@ input:focus, .select-input:focus {
 
 .mobile-bottom-nav .nav-item.accent {
     color: #25d366;
+}
+
+.mobile-bottom-nav .nav-item.accent-gold {
+    color: var(--primary);
 }
 
 .mobile-bottom-nav .nav-item:active {
