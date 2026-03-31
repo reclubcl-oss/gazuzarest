@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (welcomePopup) {
             welcomePopup.classList.add('active');
         }
-    }, 3000); // 3 seconds delay
+    }, 5000); // 5 seconds delay
 
     if (closePopup) {
         closePopup.addEventListener('click', () => {
