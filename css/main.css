@@ -373,45 +373,85 @@ input:focus, .select-input:focus {
 .popup-content {
     background: var(--bg-card);
     border: 1px solid var(--primary);
-    padding: 60px 40px;
-    border-radius: 12px;
+    padding: 70px 50px;
+    border-radius: 24px;
     position: relative;
-    max-width: 500px;
-    width: 100%;
+    max-width: 550px;
+    width: 90%;
     text-align: center;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-    animation: popupFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.9), 0 0 30px rgba(197, 160, 89, 0.15);
+    overflow: hidden; /* For the background pseudo-element */
+    animation: popupFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.popup-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/parrillada_popup.png') center/cover no-repeat;
+    filter: blur(4px) brightness(0.4);
+    transform: scale(1.1); /* Prevents white edges from blur */
+    z-index: 0;
+}
+
+.popup-body {
+    position: relative;
+    z-index: 1;
 }
 
 @keyframes popupFadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    from { 
+        opacity: 0; 
+        transform: scale(0.95) translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1) translateY(0); 
+    }
 }
 
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
+    top: 25px;
+    right: 25px;
+    background: rgba(255, 255, 255, 0.1);
     border: none;
-    color: var(--text-muted);
-    font-size: 2rem;
+    color: var(--white);
+    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    line-height: 1;
+    z-index: 10;
+    transition: var(--transition);
 }
 
 .close-btn:hover {
-    color: var(--primary);
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
 }
 
 .popup-body h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
+    background: linear-gradient(to bottom, #fff, #bbb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .popup-body p {
     color: var(--text-muted);
     margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 /* Footer expansion */
