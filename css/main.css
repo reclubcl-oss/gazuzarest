@@ -776,6 +776,19 @@ input:focus, .select-input:focus {
     .mobile-bottom-nav {
         display: flex;
     }
+
+    .popup-content {
+        padding: 40px 25px;
+        border-radius: 15px;
+    }
+
+    .popup-body h2 {
+        font-size: 1.6rem;
+    }
+
+    .popup-body p {
+        font-size: 0.95rem;
+    }
 }
 
 .mobile-bottom-nav .nav-item {
@@ -827,5 +840,28 @@ input:focus, .select-input:focus {
 
     .menu-item-card {
         padding: 15px;
+    }
+
+    .popup-content {
+        padding: 35px 20px;
+        width: 95%;
+    }
+
+    .popup-body h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .popup-body p {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .close-btn {
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
     }
 }
