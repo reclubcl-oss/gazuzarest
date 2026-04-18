@@ -547,6 +547,13 @@ input:focus, .select-input:focus {
     background: var(--primary);
 }
 
+.category-note {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
 .menu-item-card {
     background: var(--glass);
     border: 1px solid var(--border);
